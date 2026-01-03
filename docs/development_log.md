@@ -21,3 +21,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-01-03 12:06:30
 - **Type**: FEAT
 - **Action**: feat: add SMOTE data resampling to handle class imbalance
+
+### Update - Commit 5
+- **Date**: 2026-01-03 13:31:26
+- **Type**: REFACTOR
+- **Action**: refactor: simplify model training workflow function calls
