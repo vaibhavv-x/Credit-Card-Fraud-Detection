@@ -16,3 +16,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-01-03 11:24:47
 - **Type**: REFACTOR
 - **Action**: refactor: clean up redundant CSS rules in global stylesheet
+
+### Update - Commit 4
+- **Date**: 2026-01-03 12:06:30
+- **Type**: FEAT
+- **Action**: feat: add SMOTE data resampling to handle class imbalance
