@@ -36,3 +36,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-01-03 15:48:36
 - **Type**: FEAT
 - **Action**: feat: add interactive ROC-AUC curve visualization in frontend
+
+### Update - Commit 8
+- **Date**: 2026-01-22 09:01:25
+- **Type**: FEAT
+- **Action**: feat: add database schema for logging blocked transactions
