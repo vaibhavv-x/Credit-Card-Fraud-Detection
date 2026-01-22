@@ -56,3 +56,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-01-22 13:35:03
 - **Type**: FEAT
 - **Action**: feat: design React dashboard layout for fraud alert monitoring
+
+### Update - Commit 12
+- **Date**: 2026-01-22 15:47:59
+- **Type**: DOCS
+- **Action**: docs: document API endpoint request and response formats
