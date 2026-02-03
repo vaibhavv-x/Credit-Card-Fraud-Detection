@@ -86,3 +86,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-02-03 09:02:10
 - **Type**: REFACTOR
 - **Action**: refactor: simplify model training workflow function calls
+
+### Update - Commit 18
+- **Date**: 2026-02-03 09:09:33
+- **Type**: DOCS
+- **Action**: docs: add system architecture overview to development logs
