@@ -131,3 +131,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-02-10 15:09:01
 - **Type**: FIX
 - **Action**: fix: fix layout shifting on mobile dashboard views
+
+### Update - Commit 27
+- **Date**: 2026-02-10 15:10:54
+- **Type**: TEST
+- **Action**: test: write unit tests for transaction amount scaler function
