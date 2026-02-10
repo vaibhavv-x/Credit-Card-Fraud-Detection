@@ -121,3 +121,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-02-10 12:04:34
 - **Type**: TEST
 - **Action**: test: mock API database connections in controller tests
+
+### Update - Commit 25
+- **Date**: 2026-02-10 12:06:39
+- **Type**: FEAT
+- **Action**: feat: add interactive ROC-AUC curve visualization in frontend
