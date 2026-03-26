@@ -191,3 +191,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-03-26 13:30:40
 - **Type**: REFACTOR
 - **Action**: refactor: simplify model training workflow function calls
+
+### Update - Commit 39
+- **Date**: 2026-03-26 15:45:38
+- **Type**: FEAT
+- **Action**: feat: add SMOTE data resampling to handle class imbalance
