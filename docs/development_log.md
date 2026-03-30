@@ -201,3 +201,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-03-27 09:02:19
 - **Type**: FEAT
 - **Action**: feat: add database schema for logging blocked transactions
+
+### Update - Commit 41
+- **Date**: 2026-03-30 09:09:09
+- **Type**: FEAT
+- **Action**: feat: add SMOTE data resampling to handle class imbalance
