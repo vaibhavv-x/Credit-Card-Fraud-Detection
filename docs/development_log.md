@@ -251,3 +251,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-04-23 09:09:31
 - **Type**: FEAT
 - **Action**: feat: add Standard Scaler preprocessing for transaction amounts
+
+### Update - Commit 51
+- **Date**: 2026-04-23 11:25:53
+- **Type**: FEAT
+- **Action**: feat: add SMOTE data resampling to handle class imbalance
