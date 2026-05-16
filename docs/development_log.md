@@ -266,3 +266,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-04-23 15:48:04
 - **Type**: FIX
 - **Action**: fix: fix SQLite database locking during concurrent API calls
+
+### Update - Commit 54
+- **Date**: 2026-05-16 09:04:36
+- **Type**: DOCS
+- **Action**: docs: document API endpoint request and response formats
