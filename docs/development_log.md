@@ -271,3 +271,8 @@ Incremental development and engineering logs.
 - **Date**: 2026-05-16 09:04:36
 - **Type**: DOCS
 - **Action**: docs: document API endpoint request and response formats
+
+### Update - Commit 55
+- **Date**: 2026-05-16 12:07:57
+- **Type**: FEAT
+- **Action**: feat: add interactive ROC-AUC curve visualization in frontend
