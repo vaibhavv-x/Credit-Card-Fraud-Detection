@@ -12,7 +12,7 @@
 
 *An end-to-end, high-performance credit card fraud analytics platform customized for the Indian financial sector.*
 
-[Live Backend (Render)](https://aegisfraud-backend.onrender.com) &nbsp;|&nbsp; [Live Frontend (Vercel)](https://aegisfraud.vercel.app/)
+&nbsp; [Live (Vercel)](https://aegisfraud.vercel.app/)
 
 </div>
 
