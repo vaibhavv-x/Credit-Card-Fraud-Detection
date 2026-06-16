@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { GitCommit, ArrowRight, CheckCircle, RefreshCw, AlertTriangle, ShieldCheck, ShieldAlert } from 'lucide-react';
 
 const Preprocessing = () => {
@@ -12,7 +13,7 @@ const Preprocessing = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:8000/api/pipeline-steps');
+      const res = await fetch(`${API_BASE_URL}/api/pipeline-steps`);
       if (!res.ok) throw new Error('Failed to load preprocessing pipeline steps');
       const json = await res.json();
       setSteps(json);

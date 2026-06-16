@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, 
   PieChart, Pie, Cell, ScatterChart, Scatter, LineChart, Line, AreaChart, Area 
@@ -15,7 +16,7 @@ const EDA = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:8000/api/eda/charts');
+      const res = await fetch(`${API_BASE_URL}/api/eda/charts`);
       if (!res.ok) throw new Error('Failed to load EDA chart coordinates');
       const json = await res.json();
       setData(json);

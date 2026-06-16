@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { PlayCircle, ShieldCheck, ShieldAlert, Sparkles, RefreshCw, AlertTriangle } from 'lucide-react';
 
 const FraudPrediction = () => {
@@ -70,7 +71,7 @@ const FraudPrediction = () => {
     setResult(null);
 
     try {
-      const res = await fetch(`http://localhost:8000/api/predict?model=${encodeURIComponent(model)}`, {
+      const res = await fetch(`${API_BASE_URL}/api/predict?model=${encodeURIComponent(model)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { 
   Database, ShieldCheck, ShieldAlert, AlertTriangle, 
   Search, RefreshCw, Layers, FileCode 
@@ -17,13 +18,13 @@ const DatasetOverview = () => {
     setError(null);
     try {
       // Fetch stats
-      const statsRes = await fetch('http://localhost:8000/api/dataset/stats');
+      const statsRes = await fetch(`${API_BASE_URL}/api/dataset/stats`);
       if (!statsRes.ok) throw new Error('Failed to load dataset stats');
       const statsData = await statsRes.json();
       setStats(statsData);
 
       // Fetch samples
-      const sampleRes = await fetch('http://localhost:8000/api/dataset/sample?limit=150');
+      const sampleRes = await fetch(`${API_BASE_URL}/api/dataset/sample?limit=150`);
       if (!sampleRes.ok) throw new Error('Failed to load transaction samples');
       const sampleData = await sampleRes.json();
       setSamples(sampleData);

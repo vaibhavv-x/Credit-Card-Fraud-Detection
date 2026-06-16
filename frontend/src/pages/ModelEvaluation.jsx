@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 import { motion } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { CheckCircle, RefreshCw, AlertTriangle, ShieldCheck, ShieldAlert } from 'lucide-react';
@@ -25,7 +26,7 @@ const ModelEvaluation = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`http://localhost:8000/api/models/evaluation/${encodeURIComponent(name)}`);
+      const res = await fetch(`${API_BASE_URL}/api/models/evaluation/${encodeURIComponent(name)}`);
       if (!res.ok) throw new Error(`Failed to load evaluation data for ${name}`);
       const json = await res.json();
       setModelData(json);

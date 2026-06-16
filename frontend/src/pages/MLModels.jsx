@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Cpu, RefreshCw, AlertTriangle, ChevronRight, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -15,7 +16,7 @@ const MLModels = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:8000/api/models/compare');
+      const res = await fetch(`${API_BASE_URL}/api/models/compare`);
       if (!res.ok) throw new Error('Failed to load models comparison metrics');
       const json = await res.json();
       setComparison(json);

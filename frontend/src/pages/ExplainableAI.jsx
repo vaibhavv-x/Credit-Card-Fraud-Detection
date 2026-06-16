@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 import { Eye, Info, RefreshCw, AlertTriangle, ShieldCheck, ShieldAlert, Cpu } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -40,7 +41,7 @@ const ExplainableAI = () => {
     try {
       // Fetch Local SHAP Explanation (via predict route which returns shap object)
       const payload = transactions[transactionType];
-      const res = await fetch(`http://localhost:8000/api/predict?model=${encodeURIComponent(model)}`, {
+      const res = await fetch(`${API_BASE_URL}/api/predict?model=${encodeURIComponent(model)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -50,7 +51,7 @@ const ExplainableAI = () => {
       setData(json);
 
       // Fetch Global Feature Importance for current model
-      const evalRes = await fetch(`http://localhost:8000/api/models/evaluation/${encodeURIComponent(model)}`);
+      const evalRes = await fetch(`${API_BASE_URL}/api/models/evaluation/${encodeURIComponent(model)}`);
       if (evalRes.ok) {
         const evalData = await evalRes.json();
         setGlobalImportance(evalData.feature_importance || []);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { API_BASE_URL } from '../config';
 import { 
   ShieldAlert, RefreshCw, Upload, Download, FileText, 
   Search, ShieldCheck, CheckCircle, AlertTriangle 
@@ -37,7 +38,7 @@ const BatchPrediction = () => {
     formData.append('model', model);
 
     try {
-      const res = await fetch('http://localhost:8000/api/predict/batch', {
+      const res = await fetch(`${API_BASE_URL}/api/predict/batch`, {
         method: 'POST',
         body: formData
       });
@@ -59,7 +60,7 @@ const BatchPrediction = () => {
 
   // Helper to trigger backend downloads (CSV or PDF)
   const handleExport = (format) => {
-    window.open(`http://localhost:8000/api/predict/batch/export?format=${format}`, '_blank');
+    window.open(`${API_BASE_URL}/api/predict/batch/export?format=${format}`, '_blank');
   };
 
   // Helper to download a test batch CSV file template
