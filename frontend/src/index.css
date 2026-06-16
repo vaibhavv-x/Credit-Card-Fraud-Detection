@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.5) 0px, transparent 80%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Thin Futuristic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 22, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Glassmorphism card utility classes */
+.glass-panel {
+  @apply bg-darkCard border border-darkBorder rounded-2xl backdrop-blur-glass shadow-glass transition-all duration-300;
+}
+
+.glass-panel-hover {
+  @apply hover:border-brandPurple/40 hover:shadow-glowPurple hover:-translate-y-0.5;
+}
+
+/* Interactive custom table */
+.custom-table {
+  @apply w-full text-left border-collapse;
+}
+
+.custom-table th {
+  @apply p-4 text-xs font-semibold text-slate-400 uppercase tracking-wider border-b border-darkBorder bg-slate-900/30;
+}
+
+.custom-table td {
+  @apply p-4 text-sm border-b border-darkBorder/40 transition-colors duration-150;
+}
+
+.custom-table tr:hover td {
+  @apply bg-slate-800/20;
+}
+
+/* Radial animated glow background circles */
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+}
+
+.glow-blue {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+}
+
+/* Animated gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brandBlue via-brandPurple to-brandPink;
+}
